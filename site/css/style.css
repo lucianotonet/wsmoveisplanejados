@@ -1,9 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
@@ -45,7 +39,7 @@ a:hover {
 .logo {
   float: left;
   position: absolute;
-  top: 0%;
+  top: 7%;
 }
 .top-nav {
   float: right;
@@ -124,18 +118,17 @@ span.menu {
 }
 .top-nav ul li a {
   font-size: 1em;
-  color: #c76161;
+  color: #5CA57A;
 }
 .top-nav ul li a:hover,.top-nav ul li a.active{
-	color: #F5AF33;
+	color: #fff;
 	text-decoration:none;
 }
 .header {
   padding: 1.3em 0em 1.3em 0em;
-  background: #fff;
+  background: #523E35;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, 0.29);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+
 }
 .logo h1{
   font-size: 2.5em;
@@ -365,12 +358,12 @@ span.mouse {
   -o-transition: 0.5s all;
 }
 .footer {
-  padding: 4em 0em 4em 0em;
-  background: #171717;
+  padding: 2px 0px 30px 0px;
+  background: #523E35;
 }
 .copy-right {
   text-align: center;
-  padding: 4em 0em 0em 0em;
+  padding: 2em 0em 0em 0em;
 }
 .copy-right p {
   font-size: 1em;
