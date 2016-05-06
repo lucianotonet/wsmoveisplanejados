@@ -202,12 +202,15 @@ span.mouse {
   margin-left: 20px;
 }
 .seal span{
-  font-family: 'Champagne & Limousines';
+  /* font-family: 'Champagne & Limousines'; */
+  font-family: 'champagne__limousinesregular';
   font-size: 3em;
-  font-weight: none;
+  font-weight: 300;
   color: #fff;
   text-transform: uppercase;
-
+}
+.seal span strong{
+    font-family: 'champagne__limousinesbold';
 }
 /*--banner end here--*/
 /*--bann-info start here--*/
