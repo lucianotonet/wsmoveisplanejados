@@ -16,6 +16,10 @@ a:hover {
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
 }
+@font-face{
+  font-family: 'Champagne & Limousines';
+  src:url(../fonts/Champagne & Limousines.ttf) format('truetype');
+}
 @font-face {
     font-family: 'Play-Regular';
     src:url(../fonts/Play-Regular.ttf) format('truetype');
@@ -27,6 +31,7 @@ a:hover {
 /*--header start here--*/
 .banner {
   background: url(../images/kitchen.jpg)no-repeat;
+  background-position: center center;
   min-height: 790px;
   background-size: cover;
   padding: 0em 0em 0em 0em;
@@ -34,7 +39,7 @@ a:hover {
 .logo {
   float: left;
   position: absolute;
-  top: 7%;
+  top: 15%;
 }
 .top-nav {
   float: right;
@@ -185,6 +190,25 @@ span.mouse {
 .bann-strip-right {
   text-align: center;
 }
+.seal{
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #50946D;
+}
+.seal img{
+  margin-top: 5px;
+  width: 150px;
+  margin-left: 20px;
+}
+.seal span{
+  font-family: 'Champagne & Limousines';
+  font-size: 3em;
+  font-weight: none;
+  color: #fff;
+  text-transform: uppercase;
+
+}
 /*--banner end here--*/
 /*--bann-info start here--*/
 .bann-info-left {
@@ -193,20 +217,22 @@ span.mouse {
   background-size: cover;
 }
 .bann-info-right {
+  background-image:url(../images/bg-box.png);
+  background-position: right;
   text-align: center;
   padding: 8em 0em 0em 0em;
-  background: #F5AF33;
+  background: #ffcb05;
   min-height: 400px;
 }
 .bann-info-right h4 {
   font-size: 2em;
-  color: #fff;
+  color: #523E35;
   margin: 0em 0em 0.3em 0em;
   font-family: 'Play-Regular';
 }
 .bann-info-right p {
-  font-size: 1em;
-  color: #fff;
+  font-size: 1.5em;
+  color: #523E35;
   line-height: 1.9em;
   width: 70%;
   margin: 0 auto;
@@ -214,7 +240,7 @@ span.mouse {
 /*--bann-info end here--*/
 /*--home strat here--*/
 .home-left {
-  background:#c76161;
+  background:#3fbbb3;
   min-height: 400px;
   text-align: center;
   padding: 8em 0em 0em 0em;
@@ -231,7 +257,7 @@ span.mouse {
   font-family: 'Play-Regular';
 }
 .home-left p {
-  font-size: 1em;
+  font-size: 1.5em;
   color: #fff;
   line-height: 1.9em;
   width: 70%;
