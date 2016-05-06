@@ -211,6 +211,7 @@ span.mouse {
 }
 .seal span strong{
     font-family: 'champagne__limousinesbold';
+    font-weight: 400;
 }
 /*--banner end here--*/
 /*--bann-info start here--*/
@@ -220,8 +221,7 @@ span.mouse {
   background-size: cover;
 }
 .bann-info-right {
-  background-image:url(../images/bg-box.png);
-  background-position: right;
+  background-image:url("../images/bg-box.png");
   text-align: center;
   padding: 8em 0em 0em 0em;
   background: #ffcb05;
