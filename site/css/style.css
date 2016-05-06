@@ -195,6 +195,9 @@ span.mouse {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #50946D;
+  background: url("../images/bg_boxright.png") #50946D right center no-repeat;
+  background-attachment: fixed;
+  background-size: inherit;
 }
 .seal img{
   margin-top: 5px;
@@ -208,10 +211,16 @@ span.mouse {
   font-weight: 300;
   color: #fff;
   text-transform: uppercase;
+  line-height: 1;
+  vertical-align: middle;
+  letter-spacing: -1px;
+  word-spacing: -8px;
 }
 .seal span strong{
     font-family: 'champagne__limousinesbold';
     font-weight: 400;
+    /* letter-spacing: 0; */
+    /* word-spacing: 0; */
 }
 /*--banner end here--*/
 /*--bann-info start here--*/
@@ -221,10 +230,11 @@ span.mouse {
   background-size: cover;
 }
 .bann-info-right {
-  background-image:url("../images/bg-box.png");
   text-align: center;
   padding: 8em 0em 0em 0em;
-  background: #ffcb05;
+  background: url("../images/bg_boxright.png") #ffcb05 right center no-repeat;
+  background-attachment: fixed;
+  background-size: inherit;
   min-height: 400px;
 }
 .bann-info-right h4 {
@@ -244,6 +254,9 @@ span.mouse {
 /*--home strat here--*/
 .home-left {
   background:#3fbbb3;
+  background: url("../images/bg_boxleft.png") #3fbbb3 left center no-repeat;
+  background-attachment: fixed;
+  background-size: 50%;
   min-height: 400px;
   text-align: center;
   padding: 8em 0em 0em 0em;
