@@ -195,11 +195,15 @@ span.mouse {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #50946D;
+  background: url("../images/bg_boxright.png") #50946D right center no-repeat;
+  background-attachment: fixed;
+  background-size: inherit;
 }
 .seal img{
-  margin-top: 5px;
-  width: 150px;
-  margin-left: 20px;
+  margin-top: 4px;
+  /* width: 150px; */
+  margin-left: 0px;
+  margin-right: 50px;
 }
 .seal span{
   /* font-family: 'Champagne & Limousines'; */
@@ -208,23 +212,30 @@ span.mouse {
   font-weight: 300;
   color: #fff;
   text-transform: uppercase;
+  line-height: 1;
+  vertical-align: middle;
+  letter-spacing: -1px;
+  word-spacing: -8px;
 }
 .seal span strong{
     font-family: 'champagne__limousinesbold';
     font-weight: 400;
+    /* letter-spacing: 0; */
+    /* word-spacing: 0; */
 }
 /*--banner end here--*/
 /*--bann-info start here--*/
 .bann-info-left {
-  background:url(../images/m1.jpg)no-repeat;
+  background: url(../images/m1.jpg)no-repeat center bottom;
   min-height: 400px;
   background-size: cover;
 }
 .bann-info-right {
-  background-image:url("../images/bg-box.png");
   text-align: center;
-  padding: 8em 0em 0em 0em;
-  background: #ffcb05;
+  padding: 10em 0em 0em 0em;
+  background: url("../images/bg_boxright.png") #ffcb05 right center no-repeat;
+  background-attachment: fixed;
+  background-size: inherit;
   min-height: 400px;
 }
 .bann-info-right h4 {
@@ -234,22 +245,31 @@ span.mouse {
   font-family: 'Play-Regular';
 }
 .bann-info-right p {
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: #523E35;
-  line-height: 1.9em;
+  line-height: 1.2em;
   width: 70%;
   margin: 0 auto;
+  font-family: 'champagne__limousinesregular';
+  font-weight: 300;
+}
+.bann-info-right p strong{ 
+  font-family: 'champagne__limousinesbold';
+  font-weight: 600;
 }
 /*--bann-info end here--*/
 /*--home strat here--*/
 .home-left {
   background:#3fbbb3;
+  background: url("../images/bg_boxleft.png") #3fbbb3 left center no-repeat;
+  background-attachment: fixed;
+  background-size: 50%;
   min-height: 400px;
   text-align: center;
   padding: 8em 0em 0em 0em;
 }
 .home-right {
-  background: url(../images/m2.jpg)no-repeat;
+  background: url(../images/m2.jpg)no-repeat center bottom;
   min-height: 400px;
   background-size: cover;
 }
@@ -260,11 +280,14 @@ span.mouse {
   font-family: 'Play-Regular';
 }
 .home-left p {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #fff;
   line-height: 1.9em;
   width: 70%;
   margin: 0 auto;
+  font-family: 'champagne__limousinesregular';
+  text-transform: lowercase;
+  font-weight: 300;
 }
 /*--home end here--*/
 /*--creative start here--*/
