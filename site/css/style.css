@@ -3,8 +3,8 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
-  font-family: 'Hind-Regular';
-   font-size: 100%;
+  font-family: 'Champagne & Limousines';
+   font-size: 18px;
    background:#fff; 
 }
 a {
@@ -286,7 +286,6 @@ span.mouse {
   width: 70%;
   margin: 0 auto;
   font-family: 'champagne__limousinesregular';
-  text-transform: lowercase;
   font-weight: 300;
 }
 /*--home end here--*/
@@ -394,7 +393,6 @@ span.mouse {
   font-weight: bold;
   color:#523E35;
   margin: 0em 0em 0.9em 0em;
-  font-family: 'Play-Regular';
 }
 .about-top p {
   font-size: 1em;
@@ -530,10 +528,10 @@ span.mouse {
   padding: 0em 0em 4em 0em;
 }
 .services-top h2 {
-  font-size: 2.5em;
-  color: #c76161;
+  font-size: 4.5em;
+  color: #523E35;
+  font-weight: bold;
   margin: 0em 0em 0.2em 0em;
-  font-family: 'Play-Regular';
 }
 .services-top p {
   font-size: 1em;
@@ -627,7 +625,7 @@ span.deliver-num {
 	color:#523E35;
 	margin: 0;
 	padding: 0em 0 0.3em 0;
-	font-family: 'Play-Regular';
+
 }
 .gallery-top p{
 	color: #999;
@@ -774,7 +772,6 @@ h3.typo1 {
   font-weight: bold;
   color: #523E35;
   margin: 0em 0em 0.2em 0em;
-  font-family: 'Play-Regular';
 }
 .contact-top p {
   font-size: 1em;
