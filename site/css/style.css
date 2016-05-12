@@ -20,6 +20,10 @@ a:hover {
   font-family: 'champagne__limousinesbold';
   src:url(../fonts/champagne__limousines.ttf) format('truetype');
 }
+@font-face{
+  font-family: 'champagne__limousinesb';
+  src:url(../fonts/champagne__limousines_bold.ttf) format('truetype');
+}
 @font-face {
     font-family: 'Play-Regular';
     src:url(../fonts/Play-Regular.ttf) format('truetype');
@@ -218,7 +222,7 @@ span.mouse {
   word-spacing: -8px;
 }
 .seal span strong{
-    font-family: 'champagne__limousinesbold';
+    font-family: 'champagne__limousinesb';
     font-weight: 400;
     /* letter-spacing: 0; */
     /* word-spacing: 0; */
