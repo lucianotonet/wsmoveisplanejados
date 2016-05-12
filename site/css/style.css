@@ -3,7 +3,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 html, body{
-  font-family: 'Champagne & Limousines';
+  font-family:'champagne__limousinesbold';
    font-size: 18px;
    background:#fff; 
 }
@@ -17,8 +17,8 @@ a:hover {
   -o-transition: 0.5s all;
 }
 @font-face{
-  font-family: 'Champagne & Limousines';
-  src:url(../fonts/Champagne & Limousines.ttf) format('truetype');
+  font-family: 'champagne__limousinesbold';
+  src:url(../fonts/champagne__limousines.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Play-Regular';
@@ -70,7 +70,7 @@ span.menu {
   margin: 0em 1.7em 0em 0em;
 }
 .top-nav ul li a {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #5CA57A;
 }
 .top-nav ul li a:hover,.top-nav ul li a.active{
@@ -207,7 +207,7 @@ span.mouse {
 }
 .seal span{
   /* font-family: 'Champagne & Limousines'; */
-  font-family: 'champagne__limousinesregular';
+  font-family: 'champagne__limousinesbold';
   font-size: 3em;
   font-weight: 300;
   color: #fff;
@@ -250,7 +250,7 @@ span.mouse {
   line-height: 1.2em;
   width: 70%;
   margin: 0 auto;
-  font-family: 'champagne__limousinesregular';
+  font-family: 'champagne__limousinesbold';
   font-weight: 300;
 }
 .bann-info-right p strong{ 
@@ -285,7 +285,7 @@ span.mouse {
   line-height: 1.9em;
   width: 70%;
   margin: 0 auto;
-  font-family: 'champagne__limousinesregular';
+  font-family: 'champagne__limousinesbold';
   font-weight: 300;
 }
 /*--home end here--*/
@@ -372,7 +372,7 @@ span.mouse {
   padding: 2em 0em 0em 0em;
 }
 .copy-right p {
-  font-size: 16px;
+  font-size: 17px;
   color: #fff;
 }
 .copy-right p a {
