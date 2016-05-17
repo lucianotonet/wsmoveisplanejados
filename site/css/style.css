@@ -538,11 +538,11 @@ span.mouse {
 /*--about end here--*/
 /*--services strat here--*/
 .services {
-  padding: 5em 0em 5em 0em;
+  padding: 5em 0em 2em 0em;
 }
 .services-top {
   text-align: center;
-  padding: 0em 0em 4em 0em;
+  padding: 0em 0em 0em 0em;
 }
 .services-top h2 {
   font-size: 4.5em;
@@ -587,9 +587,11 @@ span.mouse {
 }
 .serv-strip {
   background: url(../images/ser-strip.jpg)no-repeat;
-  min-height: 300px;
+  min-height: 450px;
   background-size: cover;
-  padding: 5em 0em 0em 0em;
+  padding: 10em 0em 0em 0em;
+  margin-top: 10px;
+  margin-bottom: 70px;
 }
 .delivery-info {
   padding: 5em 0em 5em 0em;
