@@ -572,7 +572,7 @@ span.mouse {
 .serv-strip-main {
   text-align: center;
 }
-.serv-strip-main button{
+.serv-strip-main a{
   margin-top: 20px;
   width: 50%;
 }
