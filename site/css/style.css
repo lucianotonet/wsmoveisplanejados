@@ -572,6 +572,9 @@ span.mouse {
 .serv-strip-main {
   text-align: center;
 }
+.serv-strip-main button{
+  margin-top: 20px;
+}
 .serv-strip-main h3 {
   font-size: 2.5em;
   color: #F5AF33;
