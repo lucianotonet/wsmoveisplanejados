@@ -574,6 +574,7 @@ span.mouse {
 }
 .serv-strip-main button{
   margin-top: 20px;
+  width: 50%;
 }
 .serv-strip-main h3 {
   font-size: 2.5em;
