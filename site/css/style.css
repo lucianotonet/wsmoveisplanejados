@@ -580,17 +580,16 @@ span.mouse {
   font-size: 2.5em;
   color: #F5AF33;
   margin: 0em 0em 0.2em 0em;
-  font-family: 'Play-Regular';
 }
 .serv-strip-main p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #fff;
   line-height: 1.8em;
   width: 55%;
   margin: 0 auto;
 }
 .serv-strip {
-  background: url(../images/ser-strip.jpg)no-repeat;
+  background: url(../images/ser-strip.png) center center no-repeat;
   min-height: 450px;
   background-size: cover;
   padding: 10em 0em 0em 0em;
@@ -658,7 +657,7 @@ span.deliver-num {
   line-height: 1.8em;
 }
 .gallery {
-  padding: 5em 0;
+  padding: 2em 0;
 }
 /******** SAP ************/
 .sap_tabs{
@@ -890,6 +889,10 @@ h3.typo1 {
   background: url(../images/kitchen.jpg)no-repeat;
   min-height: 620px;
 }
+.serv-strip-main a{
+  width: 100%;
+  margin-bottom: 30px;
+}
 .banner-bottom {
   padding: 9em 0em 0em 0em;
 }
@@ -970,6 +973,10 @@ span.menu{
 		font-size: 16px;
 		font-weight: 700;
 		position:relative;
+}
+.serv-strip-main a{
+  width: 100%;
+  margin-bottom: 30px;
 }
 .top-nav ul.res{
 	 display:none;
@@ -1240,6 +1247,10 @@ h3.typo1 {
 .home-right {
   min-height: 260px;
 }
+.serv-strip-main a{
+  width: 100%;
+  margin-bottom: 30px;
+}
 /*--shortcords--*/
 button.btn.btn-lg {
   font-size: 1.1em;
@@ -1257,6 +1268,10 @@ h3.typo1 {
 @media(max-width:480px){
 .header {
   padding: 0.5em 0em 0.5em 0em;
+}
+.serv-strip-main a{
+  width: 100%;
+  margin-bottom: 30px;
 }
 span.menu {
   padding: 0px 0px 0px 0px;
@@ -1746,6 +1761,10 @@ span.menu img {
 }
 .serv-strip-main h3 {
   font-size: 1.15em;
+}
+.serv-strip-main a{
+  width: 100%;
+  margin-bottom: 30px;
 }
 .serv-strip-main p {
   font-size: 0.8em;
