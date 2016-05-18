@@ -646,6 +646,30 @@ span.deliver-num {
   line-height: 1.8em;
 }
 /*--services end here--*/
+.description{
+  padding-top: 3em;
+  padding-bottom: 7em;
+}
+.description-top{
+  text-align:center;
+  padding: 0em 0em 7em 0em;
+}
+.description-top h2{
+  font-size: 4.5em;
+  font-weight: bold;
+  color:#523E35;
+  margin: 0;
+  padding: 0em 0 0.3em 0;
+}
+.description-info{
+  padding-bottom: 50px;
+}
+.description-info h2{
+  text-transform: uppercase;
+}
+.description-info p{
+  text-transform: uppercase;
+}
 /*--gallery--*/
 .gallery-top{
 	text-align:center;
