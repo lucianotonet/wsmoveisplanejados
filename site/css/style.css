@@ -537,6 +537,16 @@ span.mouse {
 }
 /*--about end here--*/
 /*--services strat here--*/
+.produtos{
+  padding-top: 20px;
+}
+.produtos img{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.produtos h2 {
+  text-transform: uppercase;
+}
 .services {
   padding: 5em 0em 2em 0em;
 }
@@ -657,7 +667,7 @@ span.deliver-num {
   line-height: 1.8em;
 }
 .gallery {
-  padding: 2em 0;
+  padding: 2em 0 0 0;
 }
 /******** SAP ************/
 .sap_tabs{
