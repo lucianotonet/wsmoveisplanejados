@@ -1,0 +1,22 @@
+{
+  "name": "wsmoveisplanejados",
+  "homepage": "https://github.com/tonetlds/wsmoveisplanejados",
+  "authors": [
+    "Luciano <tonetlds@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
+    "font-awesome": "^4.6.3"
+  }
+}
