@@ -9,13 +9,9 @@
 
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/easing.js"></script>
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				
-			});
-	</script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/easing.js"></script>	
 <!-- //end-smoth-scrolling -->
+
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri() ?>/images/icons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri() ?>/images/icons/apple-touch-icon-60x60.png">
@@ -39,3 +35,5 @@
 
 </head>
 <body>
+
+	<?php get_template_part( 'menu', 'menu' ); ?>
