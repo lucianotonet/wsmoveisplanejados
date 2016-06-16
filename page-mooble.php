@@ -5,7 +5,7 @@
 		<div class="services">
 			<div class="container">
 				<div class="services-main">
-					<div class="services-top">
+					<div class="content-header">
 
 						<h2><?php the_title() ?></h2>
 

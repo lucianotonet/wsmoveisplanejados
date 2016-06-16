@@ -20,18 +20,7 @@
 						<li><a href="services.html">Monte seu ambiente</a></li> 
 						<li><a href="gallery.html">Produtos</a></li> 
 						<li><a href="contact.html">Fale conosco</a></li>
-					</ul> -->
-					<li class="social-icons">
-						<a href="http://facebook.com" target="_blank">
-							<span class="fa fa-facebook"></span>
-						</a>
-						<a href="http://facebook.com" target="_blank">
-							<span class="fa fa-twitter"></span>
-						</a>
-						<a href="http://facebook.com" target="_blank">
-							<span class="fa fa-google-plus"></span>
-						</a>
-					</li> 
+					</ul> -->					
 					</ul>
 					<!-- script-for-menu -->					
 				</div>

@@ -13,11 +13,11 @@ Text Domain: wsmoveisplanejados
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
-p {margin: 0;}
+p {margin: 0;margin-bottom: 13px;font-size: 18px;}
 html, body{
   font-family:'champagne__limousinesbold';
-   font-size: 18px;
-   background:#fff; 
+  font-size: 16px;
+  background:#fff;
 }
 .adress h4{
   font-size: 20px;
@@ -57,10 +57,12 @@ a:hover {
 /*--header start here--*/
 .banner {
   background: url(images/kitchen.jpg)no-repeat;
+  background-color: rgba(82, 62, 53, 0.41);
   background-position: center center;
   min-height: 790px;
   background-size: cover;
   padding: 0em 0em 0em 0em;
+  background-blend-mode: multiply;
 }
 .logo {
   float: left;
@@ -78,8 +80,18 @@ a:hover {
     margin: 0.5em 0em 0em 0em;
 }
 .social-icons {
-  float: right;
+  padding: 2em 0 0;
+  font-size: 20px;
 }
+.social-icons a{
+  margin: 0 1em;
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons a:hover{
+  color: #5CA47A;
+}
+
 .phone-num p {
   color: #fff;
   font-size: 1em;
@@ -99,6 +111,9 @@ span.menu {
   font-size: 1.1em;
   color: #5CA57A;
 }
+.top-nav ul li.current-menu-item a{
+	color: #fff;
+}
 .top-nav ul li a:hover,.top-nav ul li a.active{
 	color: #fff;
 	text-decoration:none;
@@ -109,6 +124,19 @@ span.menu {
   position: relative;
 
 }
+
+.content-header {
+  text-align: center;
+  padding: 2em 0em 2em 0em;
+}
+
+.content-header h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #523E35;
+  margin: 0em 0em 0em 0em;
+}
+
 .social-icons span{
   color: #fff;
   margin: 0px 14px 0px 0px;
@@ -390,7 +418,8 @@ span.mouse {
   -o-transition: 0.5s all;
 }
 .footer {
-  padding: 2px 0px 30px 0px;
+  padding: 0px 0px 15px 0px;
+  margin-top: 4em;
   background: #523E35;
 }
 .copy-right {
@@ -398,27 +427,28 @@ span.mouse {
   padding: 2em 0em 0em 0em;
 }
 .copy-right p {
-  font-size: 17px;
+  font-size: 13px;
   color: #fff;
 }
 .copy-right p a {
   font-size: 1em;
-  color: #F5AF33;
+  color: #5CA47A;
+  text-decoration: none;
 }
 .copy-right p a:hover{
-	color:#c76161;
+	color: #F0AD4E;
 	text-decoration:none;
 }
 /*--footer end here--*/
 /*--about start here--*/
 .about {
-  padding: 4em 0em 5em 0em;
+  /* padding: 2em 0em 5em 0em; */
 }
 .about img{
   border-radius: 4px;
 }
 .about-top h2 {
-  font-size: 4.5em;
+  /* font-size: 3.7em; */
   font-weight: bold;
   color:#523E35;
   margin: 0em 0em 0.4em 0em;
@@ -432,7 +462,7 @@ span.mouse {
 }
 .about-top {
   text-align: center;
-  padding-bottom: 4em;
+  /* padding-bottom: 4em; */
 }
 .about-bottom h5, h5 {
   font-size: 1.3em;
@@ -556,9 +586,10 @@ span.mouse {
   padding: 1em;  
 }
 .produtos article:hover {
-  border: 1px solid rgba(82, 62, 53, 0.49);
+  /* border: 1px solid rgba(82, 62, 53, 0.49); */
+  outline: 1px solid #C1BFBF;
   border-radius: 4px;
-  height: calc(100% + 2px);
+  height: calc(100% - 2px);
 }
 .produtos img{
   margin-top: 0;
@@ -567,6 +598,40 @@ span.mouse {
 .produtos h2 {
   text-transform: uppercase;
   margin-bottom: 1em;
+  padding: 0px;
+}
+
+h2.product-title{
+	
+padding: 15px 0 0;
+	
+margin: 0;
+	
+font-weight: 600;
+	
+font-size: 23px;
+}
+.product-content{
+	font-size: 14px;
+}
+h2.product-title:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  height: 100px;
+  background-color: transparent;
+  margin-bottom: 1em;
+  width: 0;
+  height: 0;
+  border-color: #523E35;
+  border-left: 0px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 0px solid rgb(82, 62, 53);
+  border-top: 100px solid #523E35;
+  z-index: 0;
+  opacity: 0.3;
+  left: 5px;
+  top: 5px;
 }
 .produtos h2 a{
   text-transform: uppercase;
@@ -575,14 +640,14 @@ span.mouse {
 
 }
 .services {
-  padding: 5em 0em 2em 0em;
+  /* padding: 2em 0em 2em 0em; */
 }
 .services-top {
   text-align: center;
   padding: 0em 0em 0em 0em;
 }
 .services-top h2 {
-  font-size: 4.5em;
+  /* font-size: 4.5em; */
   color: #523E35;
   font-weight: bold;
   margin: 0em 0em 0.2em 0em;
@@ -611,7 +676,7 @@ span.mouse {
 }
 .serv-strip-main a{
   margin-top: 20px;
-  width: 50%;
+  /* width: 50%; */
 }
 .serv-strip-main h3 {
   font-size: 2.5em;
@@ -629,9 +694,9 @@ span.mouse {
   background: url(images/ser-strip.png) center center no-repeat;
   min-height: 450px;
   background-size: cover;
-  padding: 10em 0em 0em 0em;
-  margin-top: 10px;
-  margin-bottom: 70px;
+  padding: 8em 0em 8em 0em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .delivery-info {
   padding: 5em 0em 5em 0em;
@@ -689,13 +754,44 @@ span.deliver-num {
   padding: 0em 0 0.3em 0;
 }
 .description-info{
-  padding-bottom: 50px;
+  padding-bottom: 0px;
+}
+.nav-prev, 
+.nav-next{
+	/* color: bisque; */
+	/* font-size: 13px; */
+	padding: 0 10px 0 20px;
+	text-align: center;
+	line-height: 25;
+	color: black;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.nav-prev i, 
+.nav-next i{
+	color: black;
+	font-size: 30px;
+	margin: 0 10px;
+}
+.nav-prev:hover, 
+.nav-next:hover{
+	/* color: bisque; */
+	/* font-size: 13px; */
+	text-decoration: none;
+	background-color: #cbc5c2;
+}
+
+article.product {
+    padding: 15px;
+    margin-bottom: 30px;
 }
 .description-info h2{
   text-transform: uppercase;
+  font-weight: 600;
 }
 .description-info p{
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 /*--gallery--*/
 .gallery-top{
@@ -703,12 +799,11 @@ span.deliver-num {
 	padding: 2em 0em 4em 0em;
 }
 .gallery-top h2{
-	font-size: 4.5em;
-  font-weight: bold;
+	/* font-size: 4.5em; */
+	font-weight: bold;
 	color:#523E35;
 	margin: 0;
 	padding: 0em 0 0.3em 0;
-
 }
 .gallery-top p{
 	color: #999;
@@ -844,7 +939,7 @@ h3.typo1 {
 /*--//short codes--*/
 /*--contact start here--*/
 .contact {
-  padding: 4em 0em 5em 0em;
+  padding: 0em 0em 5em 0em;
 }
 .contact-top {
   text-align: center;
@@ -857,7 +952,7 @@ h3.typo1 {
   margin: 0em 0em 0.2em 0em;
 }
 .contact-top p {
-  font-size: 1em;
+  /* font-size: 1em; */
   color: #999;
   width: 50%;
   margin: 0 auto;

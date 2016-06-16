@@ -6,7 +6,7 @@
 		<div class="about" id="about">
 			<div class="container">
 				<div class="about-main">
-					   <div class="about-top">
+					   <div class="content-header">
 					   	   <h2><?php the_title() ?></h2>
 					   </div>
 					   <div class="about-bottom">

@@ -14,4 +14,13 @@ jQuery(document).ready(function($) {
 	$().UItoTop({ easingType: 'easeOutQuart' });
 
 	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }	
+
+	$(".fancybox").fancybox(
+		{
+    		openEffect	: 'elastic',
+    		closeEffect	: 'elastic',    	
+    		padding	: 0,    	
+    	}
+	);
+
 });

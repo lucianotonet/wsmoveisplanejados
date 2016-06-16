@@ -1,10 +1,13 @@
 <?php /* Template name: Modelo Produtos */ ?>
 <?php get_header() ?>
 
+<?php if( have_posts() ) {
+	while (have_posts()) : the_post(); ?>
+
 <div class="container">
-	<div class="gallery-top ">
-		<h2>Produtos</h2>
-		<p>Móveis com design variado para harmonizar com o seu ambiente.</p>
+	<div class="content-header">
+		<h2><?php the_title() ?></h2>
+		<?php the_content() ?>
 	</div>  
 	<div class="produtos">
 
@@ -37,12 +40,13 @@
 						<?php foreach ($produtosLinha as $produto) { ?>
 							<article class="product col-md-4" id="post-<?php echo $produto->ID ?>">
 								<div class="content">
-									<h2><a href="<?php echo $produto->guid ?>"><?php echo $produto->post_title ?></a></h2>                    
+									<h2 class="product-title"><a href="<?php echo $produto->guid ?>"><?php echo $produto->post_title ?></a></h2>
+									<div class="product-content"><?php echo $produto->post_content; ?></div>
 
 									<?php if ( get_the_post_thumbnail( $produto->ID ) ) {?>
 										<a href="<?php echo $produto->guid ?>">
 											<figure class="">
-												<?php echo get_the_post_thumbnail( $produto->ID ); ?>                        
+												<?php echo get_the_post_thumbnail( $produto->ID, 'full', array('class'=>'img-responsive') ); ?>                        
 											</figure>
 										</a>										
 										<?php }?>         
@@ -61,5 +65,9 @@ wp_reset_query();  // Restore global post data stomped by the_post().
 
 </div>
 </div>  
+
+	<?php endwhile;
+	}	
+?>
 
 <?php get_footer(); ?>

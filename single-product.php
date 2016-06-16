@@ -3,19 +3,62 @@
 	while (have_posts()) : the_post(); ?>
 
 	<section class="description">
-		<div class="description-top">
-			<!--	 <h2>Descrição do produto</h2> -->
-		</div>
-		<div class="container">
-			<div class="text-center">
+		
+		<div class="description-top"></div>
+
+		<div class="container-fluid">
 				<div class="description-info">
-					<div class="col-md-12">
-						<div class="col-md-6">
-							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/01.png" alt="">
+					<div class="row">
+						<?php
+
+							// get_posts in same custom taxonomy
+							$postlist_args = array(
+							   'posts_per_page'  => -1,
+							   'orderby'         => 'menu_order title',
+							   'order'           => 'ASC',
+							   'post_type'       => 'product'									   
+							); 
+							$postlist = get_posts( $postlist_args );
+
+							// get ids of posts retrieved from get_posts
+							$ids = array();
+							foreach ($postlist as $thepost) {
+							   $ids[] = $thepost->ID;
+							}
+
+							// get and echo previous and next post in the same taxonomy        
+							$thisindex = array_search($post->ID, $ids);
+							$previd = @$ids[$thisindex-1];
+							$nextid = @$ids[$thisindex+1];
+							if ( !empty($previd) ) {
+							   echo '<a class="col-md-1 nav-prev text-uppercase" rel="prev" href="' . get_permalink($previd). '"><i class="icon-arrow-left"></i></a>';
+							}									
+
+						?>
+						<div class="col-md-7">							
+							<?php
+							if( has_post_thumbnail( get_the_id() ) ){
+								$large = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'original' ); ?>
+									<a class="fancybox" rel="group" href="<?php echo @$large[0] ?>">
+										<?php if( has_post_thumbnail( get_the_id() ) ){
+											echo the_post_thumbnail('full', array('class'=>'img-responsive') );
+										} ?>
+									</a>
+							<?php }
+							?>							
 						</div>
-						<div class="col-md-6">
-							<h2><?php the_title() ?></h2>
-							<p>Ref: R501 | 700x1200X350</p>
+						<div class="col-md-3">
+							<article class="product">
+							<h2 class="product-title"><?php the_title() ?></h2>
+							<?php 
+								// $ref = ( rwmb_meta( 'wsmoveisplanejados_product_ref' ) ) ? "Ref:  ".rwmb_meta( 'wsmoveisplanejados_product_ref' ) : ''; 
+								// $alt = ( rwmb_meta( 'wsmoveisplanejados_product_alt' ) ) ? " | ".rwmb_meta( 'wsmoveisplanejados_product_alt' ) : '';
+								// $larg = ( rwmb_meta( 'wsmoveisplanejados_product_larg' ) ) ? "X".rwmb_meta( 'wsmoveisplanejados_product_larg' ) : '';
+								// $prof = ( rwmb_meta( 'wsmoveisplanejados_product_prof' ) ) ? "X".rwmb_meta( 'wsmoveisplanejados_product_prof' ) : '';
+								// echo $ref.$alt.$larg.$prof; 
+							?>
+							
+							<div class="post-content product-content"><?php the_content() ?></div>
 
 							<?php $i = 0; ?>
 		                    <?php foreach( rwmb_meta( 'wsmoveisplanejados_section_gallery_images', 'type=file&size=large-wide' ) as $image ){ ?>
@@ -27,10 +70,17 @@
 		                            </div>
 		                        </figure>                                                                
 		                    <?php } ?>    
+		                    </article>
 
 						</div>
-					</div>
-				</div>
+
+						
+						<?php 
+							if ( !empty($nextid) ) {
+							   echo '<a class="col-md-1 nav-next text-uppercase" rel="next" href="' . get_permalink($nextid). '"><i class="icon-arrow-right"></i></a>';
+							}
+						 ?>
+						</div>
 			</div>
 		</div>
 	</section>
