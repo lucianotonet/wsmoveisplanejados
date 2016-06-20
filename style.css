@@ -1,5 +1,5 @@
 /*
-Theme Name: WS Móveis Planejados WP Theme
+Theme Name: WS MÃ³veis Planejados WP Theme
 Theme URI: https://github.com/tonetlds/wsmoveisplanejados.com.br
 Author: Luciano Tonet
 Author URI: https://lucianotonet.com
@@ -785,6 +785,8 @@ span.deliver-num {
 article.product {
     padding: 15px;
     margin-bottom: 30px;
+    max-height: 320px;
+    overflow: hidden;
 }
 .description-info h2{
   text-transform: uppercase;

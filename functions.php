@@ -21,13 +21,24 @@
         /**
          *      JS
          */
-        wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), null, true );        
+        // wp_enqueue_script( 'angularjs', get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js', array(), null, true );
+        // wp_enqueue_script( 'angularjs-route', get_stylesheet_directory_uri() . '/bower_components/angular-route/angular-route.min.js', array('angularjs'), null, true );
+
+        wp_enqueue_script( 'jquery' );
+        // wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), null, true );        
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), null, true );        
+        wp_enqueue_script( 'isotope', get_template_directory_uri() . '/bower_components/isotope/dist/isotope.pkgd.min.js', array('jquery'), null, true );        
         wp_enqueue_script( 'easing', get_template_directory_uri() . '/js/easing.js', array('jquery'), null, true );
         wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.pack.js', array('jquery'), null, true );
         wp_enqueue_script( 'move-top', get_template_directory_uri() . '/js/move-top.js', array('jquery'), null, true );
         wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/bower_components/owl-carousel/owl-carousel/owl.carousel.min.js', array('jquery'), null, true );
-        wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true );       
+
+
+        // wp_register_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('angular-scripts'), null, true );      
+       
+        // Register the script
+        wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true  );
+
 
     }
 	add_action( 'wp_enqueue_scripts', 'wsmoveisplanejados_scripts' );
@@ -124,46 +135,56 @@ add_action( 'init', 'wsmoveisplanejados_product_post_type', 0 );
 
 
 
-if ( ! function_exists( 'product_category' ) ) {
+if ( ! function_exists( 'register_product_category' ) ) {
 
-    // Register Custom Taxonomy
-    function product_category() {
+// Register Custom Taxonomy
+function register_product_category() {
 
-        $labels = array(
-            'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'wsmoveisplanejados' ),
-            'singular_name'              => _x( 'Categoria', 'Taxonomy Singular Name', 'wsmoveisplanejados' ),
-            'menu_name'                  => __( 'Categorias', 'wsmoveisplanejados' ),
-            'all_items'                  => __( 'Todos itens', 'wsmoveisplanejados' ),
-            'parent_item'                => __( 'Categoria pai', 'wsmoveisplanejados' ),
-            'parent_item_colon'          => __( 'Parent Item:', 'wsmoveisplanejados' ),
-            'new_item_name'              => __( 'Nova categoria nome', 'wsmoveisplanejados' ),
-            'add_new_item'               => __( 'Adicionar nova categoria', 'wsmoveisplanejados' ),
-            'edit_item'                  => __( 'Editar item', 'wsmoveisplanejados' ),
-            'update_item'                => __( 'Atualizar item', 'wsmoveisplanejados' ),
-            'view_item'                  => __( 'Ver item', 'wsmoveisplanejados' ),
-            'separate_items_with_commas' => __( 'Separe por vírgula', 'wsmoveisplanejados' ),
-            'add_or_remove_items'        => __( 'Adicionar ou remover itens', 'wsmoveisplanejados' ),
-            'choose_from_most_used'      => __( 'Mais usados', 'wsmoveisplanejados' ),
-            'popular_items'              => __( 'Mais populares', 'wsmoveisplanejados' ),
-            'search_items'               => __( 'Procurar item', 'wsmoveisplanejados' ),
-            'not_found'                  => __( 'Nada encontrado', 'wsmoveisplanejados' ),
-            'no_terms'                   => __( 'Sem categorias', 'wsmoveisplanejados' ),
-            'items_list'                 => __( 'Lista de itens', 'wsmoveisplanejados' ),
-            'items_list_navigation'      => __( 'Items list navigation', 'wsmoveisplanejados' ),
-        );
-        $args = array(
-            'labels'                     => $labels,
-            'hierarchical'               => true,
-            'public'                     => true,
-            'show_ui'                    => true,
-            'show_admin_column'          => true,
-            'show_in_nav_menus'          => true,
-            'show_tagcloud'              => true,
-        );
-        register_taxonomy( 'category', array( 'product' ), $args );
+    $labels = array(
+        'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'wsmoveisplanejados' ),
+        'singular_name'              => _x( 'Categoria', 'Taxonomy Singular Name', 'wsmoveisplanejados' ),
+        'menu_name'                  => __( 'Categorias', 'wsmoveisplanejados' ),
+        'all_items'                  => __( 'Todos itens', 'wsmoveisplanejados' ),
+        'parent_item'                => __( 'Categoria pai', 'wsmoveisplanejados' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'wsmoveisplanejados' ),
+        'new_item_name'              => __( 'Nova categoria nome', 'wsmoveisplanejados' ),
+        'add_new_item'               => __( 'Adicionar nova categoria', 'wsmoveisplanejados' ),
+        'edit_item'                  => __( 'Editar item', 'wsmoveisplanejados' ),
+        'update_item'                => __( 'Atualizar item', 'wsmoveisplanejados' ),
+        'view_item'                  => __( 'Ver item', 'wsmoveisplanejados' ),
+        'separate_items_with_commas' => __( 'Separe por vírgula', 'wsmoveisplanejados' ),
+        'add_or_remove_items'        => __( 'Adicionar ou remover itens', 'wsmoveisplanejados' ),
+        'choose_from_most_used'      => __( 'Mais usados', 'wsmoveisplanejados' ),
+        'popular_items'              => __( 'Mais populares', 'wsmoveisplanejados' ),
+        'search_items'               => __( 'Procurar item', 'wsmoveisplanejados' ),
+        'not_found'                  => __( 'Nada encontrado', 'wsmoveisplanejados' ),
+        'no_terms'                   => __( 'Sem categorias', 'wsmoveisplanejados' ),
+        'items_list'                 => __( 'Lista de itens', 'wsmoveisplanejados' ),
+        'items_list_navigation'      => __( 'Items list navigation', 'wsmoveisplanejados' ),
+    );
+    $rewrite = array(
+        'slug'                       => 'categoria',
+        'with_front'                 => true,
+        'hierarchical'               => true,
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
 
-    }
-    add_action( 'init', 'product_category', 0 );
+        'show_in_rest'          => true,
+        'rest_base'             => 'category',
+        'rest_controller_class' => 'WP_REST_Categories_Controller',
+    );
+    register_taxonomy( 'category', array( 'product' ), $args );
+
+}
+add_action( 'init', 'register_product_category', 0 );
 
 }
 

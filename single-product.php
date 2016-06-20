@@ -32,7 +32,9 @@
 							$nextid = @$ids[$thisindex+1];
 							if ( !empty($previd) ) {
 							   echo '<a class="col-md-1 nav-prev text-uppercase" rel="prev" href="' . get_permalink($previd). '"><i class="icon-arrow-left"></i></a>';
-							}									
+							}else{
+								echo '<div class="col-md-1">&nbsp;</div>';
+							}								
 
 						?>
 						<div class="col-md-7">							
@@ -57,6 +59,25 @@
 								// $prof = ( rwmb_meta( 'wsmoveisplanejados_product_prof' ) ) ? "X".rwmb_meta( 'wsmoveisplanejados_product_prof' ) : '';
 								// echo $ref.$alt.$larg.$prof; 
 							?>
+
+								<?php
+								$terms = get_the_terms( get_the_id(), 'category' );
+					                         
+								if ( $terms && ! is_wp_error( $terms ) ) : 
+								 
+								    $draught_links = array();
+								 
+								    foreach ( $terms as $term ) {
+								        $draught_links[] = $term->name;
+								    }
+								                         
+								    $on_draught = join( ", ", $draught_links );
+								    ?>
+								 
+								    <p class="beers draught">
+								        <?php printf( '<strong>%s</strong>', esc_html( $on_draught ) ); ?>
+								    </p>
+								<?php endif; ?>
 							
 							<div class="post-content product-content"><?php the_content() ?></div>
 

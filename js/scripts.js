@@ -1,4 +1,5 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function($) {	
+
 	$( "span.menu" ).click(function() {
 		$( "ul.res" ).slideToggle( 300, function() {
 		 // Animation complete.
@@ -23,4 +24,26 @@ jQuery(document).ready(function($) {
     	}
 	);
 
+
+	// init Isotope
+	var $grid = $('.grid').isotope({
+		layoutMode: 'fitRows',
+			fitRows: {
+			  gutter: 0
+			}
+	});
+	
+	// filter items on button click
+	$('.filter-button-group a').click( function() {
+		var filterValue = $(this).attr('data-filter');
+		console.log(filterValue);
+		$grid.isotope({ 
+			filter: filterValue,
+			layoutMode: 'fitRows',
+			fitRows: {
+			  	gutter: 0
+			}
+		});
+	});
+	
 });

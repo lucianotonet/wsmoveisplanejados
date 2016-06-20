@@ -12,14 +12,16 @@
 		</div>
 
 		<script>
-			console.log("index.php");
+			console.log("Trte");
 		</script>
 
 		<div class="row">
 
 			<?php
 			
-			// TAXONOMY
+			// 	while (have_posts()){ 
+			// 		the_post();
+					// $post = $wp_query->have_posts();
 
 					echo "<script >";
 					echo "console.log(" . json_encode( $wp_query->posts() ) . ")";
