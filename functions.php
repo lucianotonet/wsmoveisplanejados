@@ -24,19 +24,27 @@
         // wp_enqueue_script( 'angularjs', get_stylesheet_directory_uri() . '/bower_components/angular/angular.min.js', array(), null, true );
         // wp_enqueue_script( 'angularjs-route', get_stylesheet_directory_uri() . '/bower_components/angular-route/angular-route.min.js', array('angularjs'), null, true );
 
-        wp_enqueue_script( 'jquery' );
-        // wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.min.js', array(), null, true );        
+        // wp_enqueue_script( 'jquery' );
+        wp_deregister_script( 'jquery' );
+        wp_dequeue_script( 'jquery' );
+        // wp_deregister_script('jquery');
+        // wp_register_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', '1.2', true );        
+        // wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+        // wp_enqueue_script('jquery');
+
+       
+        wp_enqueue_script( 'jquery', get_template_directory_uri() . '/bower_components/jquery/dist/jquery.js', array(), null, true );        
         wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery'), null, true );        
-        wp_enqueue_script( 'isotope', get_template_directory_uri() . '/bower_components/isotope/dist/isotope.pkgd.min.js', array('jquery'), null, true );        
-        wp_enqueue_script( 'easing', get_template_directory_uri() . '/js/easing.js', array('jquery'), null, true );
-        wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.pack.js', array('jquery'), null, true );
-        wp_enqueue_script( 'move-top', get_template_directory_uri() . '/js/move-top.js', array('jquery'), null, true );
+        wp_enqueue_script( 'isotope', get_template_directory_uri() . '/bower_components/isotope/dist/isotope.pkgd.min.js', array('bootstrap'), null, true );        
+        wp_enqueue_script( 'easing', get_template_directory_uri() . '/js/easing.js', array('isotope'), null, true );
+        wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/fancybox/jquery.fancybox.pack.js', array('bootstrap'), null, true );
         wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/bower_components/owl-carousel/owl-carousel/owl.carousel.min.js', array('jquery'), null, true );
 
 
         // wp_register_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('angular-scripts'), null, true );      
        
         // Register the script
+        wp_enqueue_script( 'move-top', get_template_directory_uri() . '/js/move-top.js', array('jquery'), null, true );
         wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true  );
 
 
@@ -108,7 +116,7 @@ function wsmoveisplanejados_product_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'editor', 'revisions', 'page-attributes', ), //'editor', 'excerpt', 'author', 
         'taxonomies'            => array( 'category' ),
-		'hierarchical'          => false,
+		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
@@ -283,43 +291,43 @@ function wsmoveisplanejados_product_meta_boxes( $meta_boxes ) {
     // exit;
 
 
-    $section = 'product_';
-    $meta_boxes[] = array(
-        'title'      => __( 'Detalhes', 'wsmoveisplanejados' ),
-        'post_types' => 'product',
-
-        'fields'     => 
-        array(  
-                // WYSIWYG/RICH TEXT EDITOR
-                array(
-                    'name'    => __( 'Ref', 'wsmoveisplanejados' ),
-                    'id'      => $prefix.$section."ref",
-                    'type'    => 'text',
-                    // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
-                    'raw'     => false,
-                    'std'     => __( '', 'wsmoveisplanejados' ),                    
-                ),                
-            ),
-    ); 
-
-    // $section = 'section_gallery_';
+    // $section = 'product_';
     // $meta_boxes[] = array(
-    //     'title'      => __( 'Imagens', 'wsmoveisplanejados' ),
+    //     'title'      => __( 'Detalhes', 'wsmoveisplanejados' ),
     //     'post_types' => 'product',
 
-    //     'fields'     => array(                       
-    //         array(
-    //             'id'               => $prefix.$section.'images',
-    //             'name'             => __( 'Imagens', 'wsmoveisplanejados' ),
-    //             'type'             => 'image_advanced',
-    //             // Delete image from Media Library when remove it from post meta?
-    //             // Note: it might affect other posts if you use same image for multiple posts
-    //             'force_delete'     => false,
-    //             // Maximum image uploads
-    //             'max_file_uploads' => 10,
-    //         ),                                    
-    //     ),  
-    // );   
+    //     'fields'     => 
+    //     array(  
+    //             // WYSIWYG/RICH TEXT EDITOR
+    //             array(
+    //                 'name'    => __( 'Ref', 'wsmoveisplanejados' ),
+    //                 'id'      => $prefix.$section."ref",
+    //                 'type'    => 'text',
+    //                 // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
+    //                 'raw'     => false,
+    //                 'std'     => __( '', 'wsmoveisplanejados' ),                    
+    //             ),                
+    //         ),
+    // ); 
+
+    $section = 'product_gallery_';
+    $meta_boxes[] = array(
+        'title'      => __( 'Variações', 'wsmoveisplanejados' ),
+        'post_types' => 'product',
+
+        'fields'     => array(                       
+            array(
+                'id'               => $prefix.$section.'images',
+                'name'             => __( '', 'wsmoveisplanejados' ),
+                'type'             => 'image_advanced',
+                // Delete image from Media Library when remove it from post meta?
+                // Note: it might affect other posts if you use same image for multiple posts
+                'force_delete'     => false,
+                // Maximum image uploads
+                'max_file_uploads' => 10,
+            ),                                    
+        ),  
+    );   
 
 
     return $meta_boxes;

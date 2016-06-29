@@ -8,6 +8,7 @@
 
 		<div class="container-fluid">
 				<div class="description-info">
+							
 					<div class="row">
 						<?php
 
@@ -40,14 +41,24 @@
 						<div class="col-md-7">							
 							<?php
 							if( has_post_thumbnail( get_the_id() ) ){
-								$large = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'original' ); ?>
-									<a class="fancybox" rel="group" href="<?php echo @$large[0] ?>">
+								$large = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'original' ); 
+								$attachment_title = get_the_title(get_post_thumbnail_id( get_the_id() ));								
+								?>
+									<a class="fancybox" rel="group" href="<?php echo @$large[0] ?>" title="<?php echo $attachment_title ?>">
 										<?php if( has_post_thumbnail( get_the_id() ) ){
 											echo the_post_thumbnail('full', array('class'=>'img-responsive') );
 										} ?>
 									</a>
 							<?php }
-							?>							
+							?>		
+							
+		                    <?php foreach( rwmb_meta( 'wsmoveisplanejados_product_gallery_images', 'type=file&size=large-wide' ) as $image ){ ?>
+		                        
+	                                <a rel="group" class="fancybox col-sm-4" href="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>" style="">
+	                                    <img src="<?php echo $image['url']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>">
+	                                </a>                                            
+		                        
+		                    <?php } ?>  					
 						</div>
 						<div class="col-md-3">
 							<article class="product">
@@ -81,20 +92,10 @@
 							
 							<div class="post-content product-content"><?php the_content() ?></div>
 
-							<?php $i = 0; ?>
-		                    <?php foreach( rwmb_meta( 'wsmoveisplanejados_section_gallery_images', 'type=file&size=large-wide' ) as $image ){ ?>
-		                        <figure class="">
-		                            <div class="img-wrapper">
-		                                <a rel="gallery" class="fancybox" href="<?php echo $image['full_url']; ?>">
-		                                    <img src="<?php echo $image['url']; ?>" class="<?php echo $image['title']; ?>" alt="<?php echo $image['alt']; ?>">
-		                                </a>                                            
-		                            </div>
-		                        </figure>                                                                
-		                    <?php } ?>    
 		                    </article>
 
 						</div>
-
+											
 						
 						<?php 
 							if ( !empty($nextid) ) {

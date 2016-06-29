@@ -20,7 +20,16 @@ jQuery(document).ready(function($) {
 		{
     		openEffect	: 'elastic',
     		closeEffect	: 'elastic',    	
-    		padding	: 0,    	
+    		padding	: 0, 
+    		helpers	: {
+				title	: {
+					type: 'outside'
+				},
+				thumbs	: {
+					width	: 50,
+					height	: 50
+				}
+			}   	
     	}
 	);
 

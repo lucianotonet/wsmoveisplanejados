@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="header-main">
 				<div class="logo">
-					<a href="index.html"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo1.png" alt=""></a>
+					<a href="<?php echo bloginfo('url' ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo1.png" alt=""></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu"> <img src="<?php echo get_stylesheet_directory_uri() ?>/images/icon.png" alt=""/></span>
@@ -13,16 +13,8 @@
 									 		// 'container' 		=> 'ul',
 									 		'menu_id'			=> 'main-menu',
 									 		// 'menu_class'		=> 'res'
-				 	)); ?>
-					<!-- <ul class="res">
-						<li><a href="index.html" class="active">Home</a></li> 
-						<li><a href="about.html">Quem somos</a></li> 
-						<li><a href="services.html">Monte seu ambiente</a></li> 
-						<li><a href="gallery.html">Produtos</a></li> 
-						<li><a href="contact.html">Fale conosco</a></li>
-					</ul> -->					
+				 	)); ?>								
 					</ul>
-					<!-- script-for-menu -->					
 				</div>
 				<div class="clearfix"> </div>
 			</div>
